@@ -29,6 +29,9 @@ git clone https://github.com/pathsofdesign/angular-simple-directory.git simpleDi
 cd simpleDirectory
 grunt serve
 ```
+Demo
+----
+[Angular Simple Directory Demo]
 
 License
 ----
@@ -39,3 +42,4 @@ MIT
 [AngularJS]:http://angularjs.org/
 [AngularJS Local Storage]:https://github.com/grevory/angular-local-storage
 [@pathsofdesign]:http://www.twitter.com/pathsofdesign
+[Angular Simple Directory Demo]:http://pathsofdesign.github.io/angular-simple-directory
