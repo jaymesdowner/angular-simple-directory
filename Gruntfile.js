@@ -323,32 +323,20 @@ module.exports = function (grunt) {
       }
     },
 
-      buildcontrol: {
+    buildcontrol: {
+      options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
           options: {
-              dir: 'dist',
-              commit: true,
-              push: true,
-              message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-          },
-          pages: {
-              options: {
-                  remote: 'git@github.com:Pathsofdesign/angular-simple-directory.git',
-                  branch: 'gh-pages'
-              }
-          },
-          heroku: {
-              options: {
-                  remote: 'git@heroku.com:example-heroku-webapp-1988.git',
-                  branch: 'master'
-              }
-          },
-          local: {
-              options: {
-                  remote: '../',
-                  branch: 'build'
-              }
+              remote: 'git@github.com:pathsofdesign/angular-simple-directory.git',
+              branch: 'gh-pages'
           }
       }
+    }
   });
 
   grunt.loadNpmTasks('grunt-build-control');
