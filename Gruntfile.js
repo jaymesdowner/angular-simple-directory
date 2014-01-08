@@ -332,7 +332,7 @@ module.exports = function (grunt) {
       },
       pages: {
           options: {
-              remote: 'git@github.com:pathsofdesign/angular-simple-directory.git',
+              remote: 'git@github.com:Pathsofdesign/angular-simple-directory.git',
               branch: 'gh-pages'
           }
       }
