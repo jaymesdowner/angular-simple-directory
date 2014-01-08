@@ -31,6 +31,8 @@
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "karma-ng-scenario": "~0.1.0",
     "grunt-karma": "~0.6.2",
+    "karma-mocha": "*",
+    "karma-chai": "*",
     "grunt-build-control": "~0.1.2"
   },
   "engines": {

@@ -6,8 +6,10 @@ angular.module('SimpleDirectoryModule')
     var service = {};
 
     service.get = function() {
-        $rootScope.$broadcast('entries.query');
-        return localStorageService.get('simpleDirectoryStorageKey');
+        if (localStorageService.get('simpleDirectoryStorageKey')) {
+            $rootScope.$broadcast('entries.list');
+            return localStorageService.get('simpleDirectoryStorageKey');
+        }
     };
 
     service.add = function(entry) {
