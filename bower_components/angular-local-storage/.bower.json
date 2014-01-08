@@ -22,14 +22,13 @@
     "angularjs": "*",
     "angular-mocks": "~1.2.1"
   },
-  "_release": "ee9c6d3f6f",
+  "_release": "9993ed43e0",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ee9c6d3f6faada4812df22ec2201652bb94daec7"
+    "commit": "9993ed43e0430f5292325b8645916b336ffb02e6"
   },
   "_source": "git://github.com/grevory/angular-local-storage.git",
   "_target": "*",
-  "_originalSource": "angular-local-storage",
-  "_direct": true
+  "_originalSource": "angular-local-storage"
 }
