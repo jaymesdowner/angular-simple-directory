@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('SimpleDirectoryModule')
 .factory('simpleDirectoryService', ['$rootScope', 'localStorageService' , function($rootScope, localStorageService)
 {
@@ -9,15 +11,16 @@ angular.module('SimpleDirectoryModule')
     };
 
     service.add = function(entry) {
-        if (!localStorageService.get('simpleDirectoryStorageKey')) {
-            var data = [];
-        } else {
+        var data = [];
+
+        if (localStorageService.get('simpleDirectoryStorageKey')) {
             data = localStorageService.get('simpleDirectoryStorageKey');
         }
+
         data.push(entry);
         localStorageService.add('simpleDirectoryStorageKey', data);
         $rootScope.$broadcast('entries.added');
     };
 
     return service;
-}])
+}]);
