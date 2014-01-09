@@ -3,7 +3,7 @@
 describe('Directive: addEntry', function () {
 
     // load the directive's module
-    beforeEach(module('SimpleDirectoryModule'));
+    beforeEach(module('simpleDirectoryApp'));
 
     var $compile, $rootScope, entry;
 
@@ -12,15 +12,15 @@ describe('Directive: addEntry', function () {
             $compile = $c;
             $rootScope = $r;
             entry = {
-              name: 'Joe',
-              phone: 'Biden',
-              website: 'http://www.whitehouse.gov'
+                name: 'Joe',
+                phone: 'Biden',
+                website: 'http://www.whitehouse.gov'
             };
         }]
     ));
 
     it('should respond to a click', function () {
-        var element = $compile("<add-entry></add-entry>")($rootScope);
+        var element = $compile('<add-entry></add-entry>')($rootScope);
         $rootScope.entry = entry;
         jQuery(element).click();
         expect(element.scope().clicked).to.equal(true);

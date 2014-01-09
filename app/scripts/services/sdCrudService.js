@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('SimpleDirectoryModule')
-.factory('simpleDirectoryService', ['$rootScope', 'localStorageService' , function($rootScope, localStorageService)
+angular.module('sdCrud').factory('sdCrudService', function($rootScope, localStorageService)
 {
     var service = {};
 
@@ -25,4 +24,4 @@ angular.module('SimpleDirectoryModule')
     };
 
     return service;
-}]);
+});
